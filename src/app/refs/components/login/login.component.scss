@@ -1,0 +1,22 @@
+:host ::ng-deep .p-card-body {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+
+  .p-card-title {
+    padding: 1.5em;
+    // color: white;
+  }
+}
+
+.background-layout {
+  // background-image: url('<url-image>');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  background-color: gray;
+  height: 100vh;
+}
+
+:host ::ng-deep .p-password-overlay {
+  display: none;
+}
