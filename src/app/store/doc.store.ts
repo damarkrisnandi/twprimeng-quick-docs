@@ -6,6 +6,7 @@ import { themeSwitcherComponentData } from "../refs/data/theme-switcher";
 import { twoColumnComponentData } from "../refs/data/two-columns";
 import { formGroupSingleColumnComponentData } from "../refs/data/form-group-single-column";
 import { categorizedMenuComponentData } from "../refs/data/categorized-menu";
+import { globalStateManagementData } from "../refs/data/global-state-management";
 
 
 @Injectable({
@@ -19,7 +20,8 @@ export class DocStore {
       themeSwitcherComponentData,
       twoColumnComponentData,
       formGroupSingleColumnComponentData,
-      categorizedMenuComponentData
+      categorizedMenuComponentData,
+      globalStateManagementData
     ]),
     $searchTerm: signal<string>('')
   }

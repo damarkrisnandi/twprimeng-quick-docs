@@ -18,10 +18,16 @@ export class GlobalStateManagementStore {
   })
 
   public readonly count = this.state.count.asReadonly();
+
   public increment() {
     this.state.count.update(value => value + 1);
   }
+
   public decrement() {
     this.state.count.update(value => value - 1);
+  }
+
+  public reset() {
+    this.state.count.set(0);
   }
 }
