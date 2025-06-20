@@ -7,15 +7,14 @@ import hljs from 'highlight.js/lib/core';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { IconFieldModule } from 'primeng/iconfield';
-import { InputIconModule } from 'primeng/inputicon';
 import { DocStore } from './store/doc.store';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LayoutComponent, DocsContainerComponent, ToastModule, ConfirmDialogModule, IconFieldModule, InputIconModule, ReactiveFormsModule],
+  imports: [RouterOutlet, LayoutComponent, DocsContainerComponent, ToastModule, ConfirmDialogModule, IconFieldModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

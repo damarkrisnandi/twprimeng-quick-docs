@@ -15,7 +15,7 @@ import { DatePickerModule } from 'primeng/datepicker';
   imports: [CommonModule, ReactiveFormsModule, InputGroupModule, InputGroupAddonModule, ButtonModule, InputNumberModule, InputTextModule, SelectModule, DatePickerModule],
   template: `
     <div class="grid gap-2" [formGroup]="inputAccountForm">
-      <div class="grid grid-cols-12 md:gap-12">
+      <div class="grid grid-cols-12">
         <div class="col-span-12 grid gap-2">
           <!-- Account Number -->
           <div class="grid grid-cols-12 items-center gap-2">

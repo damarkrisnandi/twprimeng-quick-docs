@@ -24,7 +24,7 @@ import { DocsDialogComponent } from '../docs-dialog/docs-dialog.component';
               <h1 class="text-2xl font-bold text-blue-400">PrimeNG</h1>
               <h1 class="text-2xl font-bold">Quick Docs</h1>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="hidden md:flex items-center gap-2">
               <p>Quickly find the documentation you need in PrimeNG and TailwindCSS</p>
             </div>
           </div>

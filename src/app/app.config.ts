@@ -7,7 +7,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { providePrimeNG } from 'primeng/config';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { DialogService } from 'primeng/dynamicdialog';
-import { provideHighlightOptions } from 'ngx-highlightjs';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -28,9 +27,6 @@ export const appConfig: ApplicationConfig = {
             }
         }
     }),
-    // provideHighlightOptions({
-    //   fullLibraryLoader: () => import('highlight.js')
-    // }),
     // provideHttpClient(
     //   withInterceptors(
     //     [httpClientInterceptor, sessionInterceptor, errorInterceptor]

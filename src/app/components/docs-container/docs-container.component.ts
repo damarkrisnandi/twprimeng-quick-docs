@@ -22,30 +22,10 @@ import { DocsDialogComponent } from '../docs-dialog/docs-dialog.component';
     </ng-template>
     <ng-template pTemplate="content" class="bg-gray-100 dark:bg-gray-900 p-4 rounded-lg shadow-md">
       <div class="flex flex-col gap-2 w-full">
-        <p-accordion value="preview">
-            <p-accordion-panel value="preview">
-                <p-accordion-header>
-                    <ng-template #toggleicon let-active="active">
-                      <div class="flex justify-center items-center gap-2">
-                        <button pButton icon="pi pi-code" (click)="viewDoc($event, {header, component, files})"></button>
-                        @if (active) {
-                            <i class="pi pi-eye-slash"></i>
-                        } @else {
-                            <i class="pi pi-eye"></i>
-                        }
-                      </div>
-                    </ng-template>
-                    <span class="flex items-center gap-2 w-full">
-                      <p>Preview Template</p>
-                    </span>
-                  </p-accordion-header>
-                  <p-accordion-content>
-                    <div class="template-doc m-0 flex flex-col">
-                      <ng-template [ngComponentOutlet]="component" />
-                    </div>
-                </p-accordion-content>
-            </p-accordion-panel>
-        </p-accordion>
+        <button pButton icon="pi pi-code" (click)="viewDoc($event, {header, component, files})"></button>
+        <div class="template-doc m-0 flex flex-col">
+          <ng-template [ngComponentOutlet]="component" />
+        </div>
       </div>
     </ng-template>
 
@@ -69,23 +49,6 @@ export class DocsContainerComponent {
     return hljs.highlight(content, { language: type }).value;
   }
 
-  copyToClipboard(event: any, content: string): void {
-    event.stopPropagation();
-
-    navigator.clipboard.writeText(content).then(() => {
-      this.messageService.add({
-        severity: 'success',
-        summary: 'Copied to Clipboard',
-        detail: 'The code has been copied to your clipboard.',
-        life: 3000
-      });
-
-      console.log('Copied to clipboard');
-    }).catch(err => {
-      console.error('Failed to copy: ', err);
-    });
-  }
-
   viewDoc(event: any, doc: Doc) {
       event.stopPropagation();
       const ref = this.dialogService.open(
@@ -93,7 +56,7 @@ export class DocsContainerComponent {
         {
           header: doc.header,
           modal: true,
-          styleClass: 'w-7/12',
+          styleClass: 'w-full h-full md:w-3/4 md:h-3/4',
           closable: true,
           data: doc
         }

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <div class="w-full">
-      <div class="grid grid-cols-12 md:gap-12">
+      <div class="grid grid-cols-12 md:gap-2">
         <!-- First Column -->
         <div class="col-span-12 md:col-span-6 grid gap-2">
           <div class="grid grid-cols-12 items-center gap-2">
