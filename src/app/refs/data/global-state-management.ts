@@ -78,12 +78,6 @@ import { GlobalStateManagementStore } from '../../stores/global-state-management
 })
 export class GlobalStateManagementDemoComponent {
   globalStore = inject(GlobalStateManagementStore);
-  handlePlus() {
-    this.globalStore.increment();
-  }
-  handleMinus() {
-    this.globalStore.decrement();
-  }
 }
 
       `
